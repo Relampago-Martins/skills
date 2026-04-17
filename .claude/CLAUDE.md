@@ -36,3 +36,11 @@ O sistema possui dois ambientes: um para os usuários finais (alunos, professore
 - If a task would require additional steps, changes, or decisions not clearly specified, *ask for confirmation before proceeding*.
 - If a question or requirement is unresolved, ambiguous, or incomplete, *ask the user for clarification instead of guessing or deducing*.
 - Prioritize correctness over completeness when context is insufficient.
+
+## Handling conflicts of instructions/skills and actual codebase
+
+If you are requested to do something and the skills or instructions on your context conflict with a pattern this codebase has already implemented, you should:
+
+- **Expose the conflicting pattern to the user** and ask for clarification on how to proceed.
+- **If the existing pattern appears to be a bug or anti-pattern**, point that out explicitly before asking how to proceed.
+- **If the user confirms that they want you to change existing patterns**, make sure to keep consistency inside the codebase, change everything that is necessary to maintain the integrity of the codebase, and **summarize what was changed and why in your final response** (not in a separate file unless asked).
